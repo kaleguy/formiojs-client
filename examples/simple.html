@@ -47,12 +47,15 @@
           form.on('submitDone', submission => {
             alert('Done submitting form.')
           })
+          form.on('change', changed => {
+            console.log('Form was changed', changed);
+          })
           form.on('error', errors => {
             alert('We have errors')
             console.log(errors)
           })
-        });
-      };
+        })
+      }
     </script>
 </head>
 <body>
