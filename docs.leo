@@ -11,7 +11,7 @@
 <vnodes>
 <v t="josephorr.20180907154621.1" a="E"><vh>[Formio.js Form Renderer](README.md)</vh>
 <v t="josephorr.20180908090057.1" a="E"><vh>Source Files</vh>
-<v t="josephorr.20180907165357.1"><vh>@clean examples/simple.html</vh>
+<v t="josephorr.20180907165357.1"><vh>@clean src/simple.html</vh>
 <v t="josephorr.20180907165423.1" a="E"><vh>&lt;html&gt;</vh>
 <v t="josephorr.20180907165423.2"><vh>&lt;head&gt;</vh>
 <v t="josephorr.20180907165423.3"><vh>bootstrap style link</vh></v>
@@ -29,7 +29,7 @@
 </v>
 </v>
 </v>
-<v t="josephorr.20180907154643.1"><vh>[Simple Example](examples/simple.html)</vh></v>
+<v t="josephorr.20180907154643.1"><vh>[Simple Example](src/simple.html)</vh></v>
 <v t="josephorr.20180908090152.1" a="E"><vh>More Info</vh>
 <v t="josephorr.20180908090341.1"><vh>[License](LICENSE.txt)</vh></v>
 <v t="josephorr.20180908121552.1"><vh>This Documentation</vh></v>
