@@ -8,6 +8,7 @@
     "example": "examples"
   },
   "scripts": {
+    "dev": "http-server",
     "test": "http-server",
     "deploy": "rm -Rf docs && mkdir docs && mkdir docs/src && cp src/* docs/src && cp README.md docs && cp LICENSE.txt docs && cp index.html docs && cp docs.leo docs"
   },

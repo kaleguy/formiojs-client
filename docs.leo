@@ -11,7 +11,7 @@
 <vnodes>
 <v t="josephorr.20180907154621.1" a="E"><vh>[Formio.js Form Renderer](README.md)</vh>
 <v t="josephorr.20180908090057.1" a="E"><vh>Source Files</vh>
-<v t="josephorr.20180907165357.1"><vh>@clean src/simple.html</vh>
+<v t="josephorr.20180907165357.1" a="E"><vh>@clean src/simple.html</vh>
 <v t="josephorr.20180907165423.1" a="E"><vh>&lt;html&gt;</vh>
 <v t="josephorr.20180907165423.2"><vh>&lt;head&gt;</vh>
 <v t="josephorr.20180907165423.3"><vh>bootstrap style link</vh></v>
@@ -105,7 +105,7 @@
 &lt;/body&gt;
 &lt;/html&gt;</t>
 <t tx="josephorr.20180907165357.1">@language html
-@tabwidth -4
+@doc This is the start of a Leo outline. Directives (start with "@") will not be written to the source file. Click on a child node to start navigating the source file.
 </t>
 <t tx="josephorr.20180907165423.1">@language htmlsource
 &lt;html&gt;
@@ -206,7 +206,19 @@ form.on('error', errors =&gt; {
 This document was created with the open source [Leo Editor](http://www.leoeditor.com) and 
 is displayed on this site with [Leo Vue](https://kaleguy.github.io/leovue).
 
-Using Leo, you can create documentation that with outlines that point directly to your source files. 
-You can then edit your code in your Leo outline or your IDE, and Leo keeps both files in sync.</t>
+Leo is a code and document outliner, among other things. For example, 
+* Outline a source file (see &lt;&lt;src/simple.html&gt;&gt; for an example.
+* Organize all of your files and documentation into outlines
+
+A single content item in a Leo outline can be placed on multiple nodes, making a Leo outline 
+considerably more powerful than the code folding feature of most IDE's. In effect, a single Leo outline 
+can provide multiple outline views of a target document.
+The Leo Editor updates node 
+content in outlines as it is changed in other editors, so Leo can be used alongside any other IDE.
+
+This documentation was made from a single Leo file displayed with LeoVue. Some nodes on the Leo 
+file point to other files such as code files or markdown files, causing LeoVue to load these files 
+into the appropriate chosen node. This makes it possible to provide a site with complete documentation for a 
+code project, including the actual code described with a multi-view outline.</t>
 </tnodes>
 </leo_file>
