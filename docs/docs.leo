@@ -13,7 +13,7 @@
 <v t="josephorr.20180908090057.1" a="E"><vh>Source Files</vh>
 <v t="josephorr.20180907165357.1" a="E"><vh>@clean src/simple.html</vh>
 <v t="josephorr.20180907165423.1" a="E"><vh>&lt;html&gt;</vh>
-<v t="josephorr.20180907165423.2"><vh>&lt;head&gt;</vh>
+<v t="josephorr.20180907165423.2" a="E"><vh>&lt;head&gt;</vh>
 <v t="josephorr.20180907165423.3"><vh>bootstrap style link</vh></v>
 <v t="josephorr.20180907165423.4"><vh>formio style link</vh></v>
 <v t="josephorr.20180907170852.1"><vh>formio library link</vh></v>
@@ -70,6 +70,7 @@
 &lt;/style&gt;
 </t>
 <t tx="josephorr.20180907165423.6">&lt;script type='text/javascript'&gt;
+@others
 &lt;/script&gt;
 </t>
 <t tx="josephorr.20180907165423.7">&lt;body&gt;
