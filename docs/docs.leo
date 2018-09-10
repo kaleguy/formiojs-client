@@ -30,7 +30,7 @@
 </v>
 </v>
 <v t="josephorr.20180907154643.1"><vh>[Simple Example](src/simple.html)</vh></v>
-<v t="josephorr.20180908090152.1" a="E"><vh>More Info</vh>
+<v t="josephorr.20180908090152.1"><vh>More Info</vh>
 <v t="josephorr.20180908090341.1"><vh>[License](LICENSE.txt)</vh></v>
 <v t="josephorr.20180908121552.1"><vh>This Documentation</vh></v>
 </v>
@@ -38,73 +38,9 @@
 </vnodes>
 <tnodes>
 <t tx="josephorr.20180907154621.1"></t>
-<t tx="josephorr.20180907154643.1">@language html
-
-&lt;html&gt;
-&lt;head&gt;
-    &lt;link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'&gt;
-    &lt;link rel='stylesheet' href='https://unpkg.com/formiojs@latest/dist/formio.full.min.css'&gt;
-    &lt;script src='https://unpkg.com/formiojs@latest/dist/formio.full.min.js'&gt;&lt;/script&gt;
-    &lt;script type='text/javascript'&gt;
-      window.onload = function() {
-        Formio.createForm(
-          document.getElementById('formio'),
-          {
-              components: [
-                {
-                  type: 'textfield',
-                  key: 'firstName',
-                  label: 'First Name',
-                  placeholder: 'Enter your first name.',
-                  input: true
-                },
-                {
-                  type: 'textfield',
-                  key: 'lastName',
-                  label: 'Last Name',
-                  placeholder: 'Enter your last name',
-                  input: true
-                },
-                {
-                  type: 'button',
-                  action: 'submit',
-                  label: 'Submit',
-                  theme: 'primary'
-                }
-              ]
-          },
-          {
-            hooks: {
-               beforeSubmit: (submission, next) =&gt; {
-                 alert('Before Submit: \n\n' + JSON.stringify(submission, null, 2))
-                 next()
-               }
-            }
-          }
-        ).then(form =&gt; {
-          form.on('submit', submission =&gt; {
-            alert('The form was just submitted!\n\n' + JSON.stringify(submission, null, 2))
-            form.emit('submitDone', submission)
-          })
-          form.on('submitDone', submission =&gt; {
-            alert('Done submitting form.')
-          })
-          form.on('change', changed =&gt; {
-            console.log('Form was changed', changed);
-          })
-          form.on('error', errors =&gt; {
-            alert('We have errors')
-            console.log(errors)
-          })
-        })
-      }
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id='formio'&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</t>
+<t tx="josephorr.20180907154643.1"></t>
 <t tx="josephorr.20180907165357.1">@language html
+@others
 @doc This is the start of a Leo outline. Directives (start with "@") will not be written to the source file. Click on a child node to start navigating the source file.
 </t>
 <t tx="josephorr.20180907165423.1">@language htmlsource
