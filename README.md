@@ -16,6 +16,9 @@ In fact, the open source form renderer can work with any framework and any backe
 the form.io server. Create a complex form on the form.io site, then export the form JSON and use
 the form renderer to build the form on your site.
 
+You can build forms and get the form JSON at this form.io demo site:
+[Form.io demo site with Form Builder](https://formio.github.io/formio.js/)
+
 This repo has a couple of examples of forms created from form.io JSON and displayed with the formio.js
 form renderer.
 
