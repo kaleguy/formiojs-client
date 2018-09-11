@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <link 
+          rel='stylesheet' 
+          href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+        <link 
+          rel='stylesheet' 
+          href='https://unpkg.com/formiojs@latest/dist/formio.full.min.css'>
+        <script 
+          src='https://unpkg.com/formiojs@latest/dist/formio.full.min.js'>
+        </script>
+        <script
+                src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous">
+        </script>
+        <style type="text/css">
+            #formio {
+                margin: 60px;
+            }
+        </style>
+        <script type='text/javascript'>
+        window.onload = function() {
+          function createForm({components}) {
+            Formio.createForm(
+              document.getElementById('formio'),
+              {
+                components: components
+              },
+              {
+                hooks: {
+                  beforeSubmit: (submission, next) => {
+                    alert('Before Submit: \n\n' + JSON.stringify(submission, null, 2))
+                    next()
+                  }
+                }
+              }
+
+            ).then(form => {
+              form.on('submit', submission => {
+                alert('The form was just submitted!\n\n' + JSON.stringify(submission, null, 2))
+                form.emit('submitDone', submission)
+              })
+              form.on('submitDone', submission => {
+                alert('Done submitting form.')
+              })
+              form.on('change', changed => {
+                console.log('Form was changed', changed);
+              })
+              form.on('error', errors => {
+                alert('We have errors')
+                console.log(errors)
+              })
+
+            })
+          }
+          $.get('kitchen-sink.json').then(createForm)
+        }
+
+        </script>
+    </head>
+
+    <body>
+    <div id='formio'></div>
+    </body>
+</html>
+
+<!--
+-->
