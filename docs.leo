@@ -45,7 +45,7 @@
 </v>
 </v>
 <v t="josephorr.20180907154643.1"><vh>[Simple Example](src/simple.html)</vh></v>
-<v t="josephorr.20180910211339.1"><vh>[Kithen Sink](src/kitchen-sink.html)</vh></v>
+<v t="josephorr.20180910211339.1"><vh>[Kitchen Sink](src/kitchen-sink.html)</vh></v>
 <v t="josephorr.20180908090152.1"><vh>More Info</vh>
 <v t="josephorr.20180908090341.1"><vh>[License](LICENSE.txt)</vh></v>
 <v t="josephorr.20180908121552.1"><vh>This Documentation</vh></v>
@@ -153,7 +153,13 @@ form.on('error', errors =&gt; {
 })</t>
 <t tx="josephorr.20180908090057.1">This node contains a couple of example source files broken down into small chunks.
 
-This file can be directly edited with the Leo Editor and the source files will be updated on save.</t>
+This file can be directly edited with the Leo Editor and the source files will be updated on save.
+
+The JSON for both examples are from the formio demo site:
+[Form.io demo site with Form Builder](https://formio.github.io/formio.js/)
+
+Using the Form Builder on the above site, you can quickly build complex forms, export the JSON and display 
+with the code shown here.</t>
 <t tx="josephorr.20180908090152.1"></t>
 <t tx="josephorr.20180908090341.1"></t>
 <t tx="josephorr.20180908121552.1">@language md
