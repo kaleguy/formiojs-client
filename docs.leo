@@ -151,11 +151,13 @@ form.on('error', errors =&gt; {
   alert('We have errors')
   console.log(errors)
 })</t>
-<t tx="josephorr.20180908090057.1">This node contains a couple of example source files broken down into small chunks.
+<t tx="josephorr.20180908090057.1">@language md
+
+This node contains a couple of example source files broken down into small chunks.
 
 This file can be directly edited with the Leo Editor and the source files will be updated on save.
 
-The JSON for both examples are from the formio demo site:
+The JSON for both examples are from the form.io demo site:
 [Form.io demo site with Form Builder](https://formio.github.io/formio.js/)
 
 Using the Form Builder on the above site, you can quickly build complex forms, export the JSON and display 
