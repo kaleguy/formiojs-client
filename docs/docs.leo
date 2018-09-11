@@ -28,15 +28,15 @@
 <v t="josephorr.20180907165423.7"><vh>&lt;body&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20180910210054.1"><vh>@clean src/kitchen-sink.html</vh>
+<v t="josephorr.20180910210054.1" a="E"><vh>@clean src/kitchen-sink.html</vh>
 <v t="josephorr.20180910210227.1" a="E"><vh>&lt;html&gt;</vh>
-<v t="josephorr.20180910210227.2" a="E"><vh>&lt;head&gt;</vh>
+<v t="josephorr.20180910210227.2"><vh>&lt;head&gt;</vh>
 <v t="josephorr.20180910210227.4"><vh>formio stylesheet</vh></v>
 <v t="josephorr.20180910210227.7"><vh>page css</vh></v>
 <v t="josephorr.20180910210227.3"><vh>bootstrap css</vh></v>
 <v t="josephorr.20180910210227.6"><vh>jquery script link</vh></v>
 <v t="josephorr.20180910210227.5"><vh>formio script link</vh></v>
-<v t="josephorr.20180910210227.8" a="E"><vh>page script tag</vh>
+<v t="josephorr.20180910210227.8"><vh>page script tag</vh>
 <v t="josephorr.20180910210655.1"><vh>&lt;&lt; onload &gt;&gt;</vh></v>
 </v>
 </v>
@@ -184,7 +184,8 @@ code project, including the actual code described with a multi-view outline.</t>
 <t tx="josephorr.20180910210054.1">@others
 @language html
 </t>
-<t tx="josephorr.20180910210227.1">&lt;html&gt;
+<t tx="josephorr.20180910210227.1">@language htmlsource
+&lt;html&gt;
     @others
 &lt;/html&gt;
 </t>
