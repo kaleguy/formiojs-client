@@ -22,6 +22,9 @@ You can build forms and get the form JSON at this form.io demo site:
 This repo has a couple of examples of forms created from form.io JSON and displayed with the formio.js
 form renderer.
 
+There is also a couple of examples of the Form.io form builder, which you can use to add a form designer to
+your apps.
+
 [Live Docs/Demo Site](https://kaleguy.github.io/formiojs-client)
 
 

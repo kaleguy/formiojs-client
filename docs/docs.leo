@@ -29,7 +29,7 @@
 </v>
 </v>
 <v t="josephorr.20180910210054.1" a="E"><vh>@clean src/kitchen-sink.html</vh>
-<v t="josephorr.20180910210227.1" a="E"><vh>&lt;html&gt;</vh>
+<v t="josephorr.20180910210227.1"><vh>&lt;html&gt;</vh>
 <v t="josephorr.20180910210227.2" a="E"><vh>&lt;head&gt;</vh>
 <v t="josephorr.20180910210227.4"><vh>formio stylesheet</vh></v>
 <v t="josephorr.20180910210227.7"><vh>page css</vh></v>
@@ -43,9 +43,21 @@
 <v t="josephorr.20180910210227.9"><vh>&lt;body&gt;</vh></v>
 </v>
 </v>
+<v t="josephorr.20181013192119.1" a="E"><vh>@clean src/form-builder.html</vh>
+<v t="josephorr.20181013192457.1" a="E"><vh>&lt;html&gt;</vh>
+<v t="josephorr.20181013215203.1"><vh>&lt;&lt; head &gt;&gt;</vh></v>
+<v t="josephorr.20181013215225.1"><vh>&lt;&lt; body &gt;&gt;</vh></v>
+<v t="josephorr.20181013215237.1" a="E"><vh>&lt;&lt; script &gt;&gt;</vh>
+<v t="josephorr.20181013215315.1"><vh>&lt;&lt; create builder &gt;&gt;</vh></v>
+<v t="josephorr.20181013215339.1"><vh>&lt;&lt; display builder and register listener to display JSON &gt;&gt;</vh></v>
+</v>
+</v>
+</v>
 </v>
 <v t="josephorr.20180907154643.1"><vh>[Simple Example](src/simple.html)</vh></v>
 <v t="josephorr.20180910211339.1"><vh>[Kitchen Sink](src/kitchen-sink.html)</vh></v>
+<v t="josephorr.20181013192846.1"><vh>[FormBuilder](src/form-builder.html)</vh></v>
+<v t="josephorr.20181013215400.1"><vh>[FormBuilder with Edit](src/form-builder-edit.html)</vh></v>
 <v t="josephorr.20180908090152.1"><vh>More Info</vh>
 <v t="josephorr.20180908090341.1"><vh>[License](LICENSE.txt)</vh></v>
 <v t="josephorr.20180908121552.1"><vh>This Documentation</vh></v>
@@ -57,15 +69,20 @@
 <t tx="josephorr.20180907154643.1"></t>
 <t tx="josephorr.20180907165357.1">@language html
 @others
-@doc This is the start of a Leo outline. Directives (start with "@") will not be written to the source file. Click on a child node to start navigating the source file.
+@ This is the start of a Leo outline. Directives (start with "@") will not be written to the source file. Click on a child node to start navigating the source file.
+
 </t>
 <t tx="josephorr.20180907165423.1">@language htmlsource
 &lt;html&gt;
     @others
-&lt;/html&gt;</t>
+&lt;/html&gt;
+
+</t>
 <t tx="josephorr.20180907165423.2">&lt;head&gt;
     @others
-&lt;/head&gt;</t>
+&lt;/head&gt;
+
+</t>
 <t tx="josephorr.20180907165423.3">&lt;link 
   rel='stylesheet' 
   href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'&gt;
@@ -95,7 +112,9 @@
 </t>
 <t tx="josephorr.20180907170852.1">&lt;script 
   src='https://unpkg.com/formiojs@latest/dist/formio.full.min.js'&gt;
-&lt;/script&gt;</t>
+&lt;/script&gt;
+
+</t>
 <t tx="josephorr.20180908082728.1">@language javascript
 window.onload = function() {
   Formio.createForm(
@@ -103,7 +122,9 @@ window.onload = function() {
   ).then(form =&gt; {
     &lt;&lt; register form events &gt;&gt;
   })
-}</t>
+}
+
+</t>
 <t tx="josephorr.20180908082939.1">document.getElementById('formio'),
 {
     components: [
@@ -136,7 +157,9 @@ window.onload = function() {
        next()
      }
   }
-}</t>
+}
+
+</t>
 <t tx="josephorr.20180908083431.1">form.on('submit', submission =&gt; {
   alert('The form was just submitted!\n\n' + JSON.stringify(submission, null, 2))
   form.emit('submitDone', submission)
@@ -150,7 +173,9 @@ form.on('change', changed =&gt; {
 form.on('error', errors =&gt; {
   alert('We have errors')
   console.log(errors)
-})</t>
+})
+
+</t>
 <t tx="josephorr.20180908090057.1">@language md
 
 This node contains a couple of example source files broken down into small chunks.
@@ -184,7 +209,7 @@ file point to other files such as code files or markdown files, causing LeoVue t
 into the appropriate chosen node. This makes it possible to provide a site with complete documentation for a 
 code project, including the actual code described with a multi-view outline.</t>
 <t tx="josephorr.20180910210054.1">@others
-@language html
+@language htmlsource
 </t>
 <t tx="josephorr.20180910210227.1">@language htmlsource
 &lt;html&gt;
@@ -193,7 +218,9 @@ code project, including the actual code described with a multi-view outline.</t>
 </t>
 <t tx="josephorr.20180910210227.2">&lt;head&gt;
     @others
-&lt;/head&gt;</t>
+&lt;/head&gt;
+
+</t>
 <t tx="josephorr.20180910210227.3">&lt;link 
     rel='stylesheet' 
     href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'&gt;
@@ -265,7 +292,74 @@ window.onload = function() {
     })
   }
   $.get('kitchen-sink.json').then(createForm)
-}</t>
+}
+
+</t>
 <t tx="josephorr.20180910211339.1"></t>
+<t tx="josephorr.20181013192119.1">@others
+@language htmlsource
+</t>
+<t tx="josephorr.20181013192457.1">@language htmlsource
+&lt;html&gt;
+&lt;&lt; head &gt;&gt;
+&lt;&lt; body &gt;&gt;
+&lt;&lt; script &gt;&gt;
+&lt;/html&gt;
+
+</t>
+<t tx="josephorr.20181013192846.1"></t>
+<t tx="josephorr.20181013215203.1">&lt;head&gt;
+    &lt;link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'&gt;
+    &lt;link rel='stylesheet' href='https://unpkg.com/formiojs@latest/dist/formio.full.min.css'&gt;
+    &lt;script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.core.min.js'&gt;&lt;/script&gt;
+    &lt;script src='https://unpkg.com/formiojs@latest/dist/formio.full.min.js'&gt;&lt;/script&gt;
+    &lt;style type="text/css"&gt;
+        BODY {
+            padding: 20px;
+            padding-right: 40px;
+        }
+        #json {
+            border: 1px solid #555;
+            padding: 20px;
+            background: #eee;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+</t>
+<t tx="josephorr.20181013215225.1">&lt;body&gt;
+&lt;h3&gt;Form Builder&lt;/h3&gt;
+&lt;div id="builder"&gt;&lt;/div&gt;
+&lt;h3&gt;Form JSON&lt;/h3&gt;
+&lt;pre id="json"&gt;&lt;/pre&gt;
+&lt;/body&gt;
+
+</t>
+<t tx="josephorr.20181013215237.1">&lt;script type='text/javascript'&gt;
+  var jsonElement = document.getElementById('json');
+  &lt;&lt; create builder &gt;&gt;
+  &lt;&lt; display builder and register listener to display JSON &gt;&gt;
+&lt;/script&gt;
+
+</t>
+<t tx="josephorr.20181013215315.1">var builder = new Formio.FormBuilder(document.getElementById("builder"), {
+  display: 'form',
+  components: [],
+  settings: {}
+}, {
+  baseUrl: ''
+});
+
+</t>
+<t tx="josephorr.20181013215339.1">builder.setDisplay('form').then(function (instance) {
+  instance.on('change', function (form) {
+    if (form.components) {
+      jsonElement.innerHTML = '';
+      jsonElement.appendChild(document.createTextNode(JSON.stringify(form, null, 4)));
+    }
+  });
+});
+</t>
+<t tx="josephorr.20181013215400.1"></t>
 </tnodes>
 </leo_file>
