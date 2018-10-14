@@ -18,30 +18,32 @@
 </head>
 
 <body>
-<h3>Form Builder</h3>
-<div id="builder"></div>
-<h3>Form JSON</h3>
-<pre id="json"></pre>
+    <h3>Form Builder</h3>
+    <div id="builder"></div>
+    <h3>Form JSON</h3>
+    <pre id="json"></pre>
 </body>
 
 <script type='text/javascript'>
-  var jsonElement = document.getElementById('json');
-  var builder = new Formio.FormBuilder(document.getElementById("builder"), {
-    display: 'form',
-    components: [],
-    settings: {}
-  }, {
-    baseUrl: ''
-  });
+var jsonElement = document.getElementById('json');
 
-  builder.setDisplay('form').then(function (instance) {
-    instance.on('change', function (form) {
-      if (form.components) {
-        jsonElement.innerHTML = '';
-        jsonElement.appendChild(document.createTextNode(JSON.stringify(form, null, 4)));
-      }
-    });
+var builder = new Formio.FormBuilder(document.getElementById("builder"), {
+  display: 'form',
+  components: [],
+  settings: {}
+}, {
+  baseUrl: ''
+});
+
+builder.setDisplay('form').then(function (instance) {
+  instance.on('change', function (form) {
+    if (form.components) {
+      jsonElement.innerHTML = '';
+      jsonElement.appendChild(document.createTextNode(JSON.stringify(form, null, 4)));
+    }
   });
+});
+
 </script>
 
 </html>

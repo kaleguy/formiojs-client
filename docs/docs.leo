@@ -48,8 +48,10 @@
 <v t="josephorr.20181013215203.1"><vh>&lt;&lt; head &gt;&gt;</vh></v>
 <v t="josephorr.20181013215225.1"><vh>&lt;&lt; body &gt;&gt;</vh></v>
 <v t="josephorr.20181013215237.1" a="E"><vh>&lt;&lt; script &gt;&gt;</vh>
+<v t="josephorr.20181014090131.1" a="E"><vh>&lt;&lt; script body &gt;&gt;</vh>
 <v t="josephorr.20181013215315.1"><vh>&lt;&lt; create builder &gt;&gt;</vh></v>
 <v t="josephorr.20181013215339.1"><vh>&lt;&lt; display builder and register listener to display JSON &gt;&gt;</vh></v>
+</v>
 </v>
 </v>
 </v>
@@ -70,7 +72,6 @@
 <t tx="josephorr.20180907165357.1">@language html
 @others
 @ This is the start of a Leo outline. Directives (start with "@") will not be written to the source file. Click on a child node to start navigating the source file.
-
 </t>
 <t tx="josephorr.20180907165423.1">@language htmlsource
 &lt;html&gt;
@@ -208,8 +209,8 @@ This documentation was made from a single Leo file displayed with LeoVue. Some n
 file point to other files such as code files or markdown files, causing LeoVue to load these files 
 into the appropriate chosen node. This makes it possible to provide a site with complete documentation for a 
 code project, including the actual code described with a multi-view outline.</t>
-<t tx="josephorr.20180910210054.1">@others
-@language htmlsource
+<t tx="josephorr.20180910210054.1">@language htmlsource
+@others
 </t>
 <t tx="josephorr.20180910210227.1">@language htmlsource
 &lt;html&gt;
@@ -296,8 +297,8 @@ window.onload = function() {
 
 </t>
 <t tx="josephorr.20180910211339.1"></t>
-<t tx="josephorr.20181013192119.1">@others
-@language htmlsource
+<t tx="josephorr.20181013192119.1">@language htmlsource
+@others
 </t>
 <t tx="josephorr.20181013192457.1">@language htmlsource
 &lt;html&gt;
@@ -327,19 +328,18 @@ window.onload = function() {
 &lt;/head&gt;
 
 </t>
-<t tx="josephorr.20181013215225.1">&lt;body&gt;
-&lt;h3&gt;Form Builder&lt;/h3&gt;
-&lt;div id="builder"&gt;&lt;/div&gt;
-&lt;h3&gt;Form JSON&lt;/h3&gt;
-&lt;pre id="json"&gt;&lt;/pre&gt;
+<t tx="josephorr.20181013215225.1">@language htmlsource
+&lt;body&gt;
+    &lt;h3&gt;Form Builder&lt;/h3&gt;
+    &lt;div id="builder"&gt;&lt;/div&gt;
+    &lt;h3&gt;Form JSON&lt;/h3&gt;
+    &lt;pre id="json"&gt;&lt;/pre&gt;
 &lt;/body&gt;
 
 </t>
-<t tx="josephorr.20181013215237.1">&lt;script type='text/javascript'&gt;
-  var jsonElement = document.getElementById('json');
-  &lt;&lt; create builder &gt;&gt;
-  &lt;&lt; display builder and register listener to display JSON &gt;&gt;
-&lt;/script&gt;
+<t tx="josephorr.20181013215237.1">@language htmlsource
+&lt;script type='text/javascript'&gt;
+&lt;&lt; script body &gt;&gt;&lt;/script&gt;
 
 </t>
 <t tx="josephorr.20181013215315.1">var builder = new Formio.FormBuilder(document.getElementById("builder"), {
@@ -359,7 +359,14 @@ window.onload = function() {
     }
   });
 });
+
 </t>
 <t tx="josephorr.20181013215400.1"></t>
+<t tx="josephorr.20181014090131.1">@language javascript
+var jsonElement = document.getElementById('json');
+
+&lt;&lt; create builder &gt;&gt;
+&lt;&lt; display builder and register listener to display JSON &gt;&gt;
+</t>
 </tnodes>
 </leo_file>
