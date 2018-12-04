@@ -44,10 +44,14 @@
     });
     builder.setDisplay('form').then(function (instance) {
       instance.on('change', function (form) {
-        formRef = form;
-        if (form.components) {
-          jsonEditElement.innerHTML = JSON.stringify(form, null, 4);
+        console.log('Changed form.')
+        var f = function() {
+          formRef = form;
+          if (form.components) {
+            jsonEditElement.innerHTML = JSON.stringify(form, null, 4);
+          }
         }
+        window.setTimeout(f, 10)
       });
     });
   }
