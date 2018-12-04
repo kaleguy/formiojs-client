@@ -28,7 +28,7 @@
 <v t="josephorr.20180907165423.7"><vh>&lt;body&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20180910210054.1" a="E"><vh>@clean src/kitchen-sink.html</vh>
+<v t="josephorr.20180910210054.1"><vh>@clean src/kitchen-sink.html</vh>
 <v t="josephorr.20180910210227.1"><vh>&lt;html&gt;</vh>
 <v t="josephorr.20180910210227.2" a="E"><vh>&lt;head&gt;</vh>
 <v t="josephorr.20180910210227.4"><vh>formio stylesheet</vh></v>
@@ -43,7 +43,7 @@
 <v t="josephorr.20180910210227.9"><vh>&lt;body&gt;</vh></v>
 </v>
 </v>
-<v t="josephorr.20181013192119.1" a="E"><vh>@clean src/form-builder.html</vh>
+<v t="josephorr.20181013192119.1"><vh>@clean src/form-builder.html</vh>
 <v t="josephorr.20181013192457.1" a="E"><vh>&lt;html&gt;</vh>
 <v t="josephorr.20181013215203.1"><vh>&lt;&lt; head &gt;&gt;</vh></v>
 <v t="josephorr.20181013215225.1"><vh>&lt;&lt; body &gt;&gt;</vh></v>
@@ -60,6 +60,7 @@
 <v t="josephorr.20180910211339.1"><vh>[Kitchen Sink](src/kitchen-sink.html)</vh></v>
 <v t="josephorr.20181013192846.1"><vh>[FormBuilder](src/form-builder.html)</vh></v>
 <v t="josephorr.20181013215400.1"><vh>[FormBuilder with Edit](src/form-builder-edit.html)</vh></v>
+<v t="josephorr.20181204184948.1"><vh>[FormBuilder with JSON Editor](src/form-builder-edit-json.html)</vh></v>
 <v t="josephorr.20180908090152.1"><vh>More Info</vh>
 <v t="josephorr.20180908090341.1"><vh>[License](LICENSE.txt)</vh></v>
 <v t="josephorr.20180908121552.1"><vh>This Documentation</vh></v>
@@ -368,5 +369,6 @@ var jsonElement = document.getElementById('json');
 &lt;&lt; create builder &gt;&gt;
 &lt;&lt; display builder and register listener to display JSON &gt;&gt;
 </t>
+<t tx="josephorr.20181204184948.1"></t>
 </tnodes>
 </leo_file>

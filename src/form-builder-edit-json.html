@@ -1,0 +1,94 @@
+<html>
+<head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://unpkg.com/formiojs@latest/dist/formio.full.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.core.min.js'></script>
+    <script src='https://unpkg.com/formiojs@latest/dist/formio.full.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/5.26.2/jsoneditor.js'></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/5.26.2/jsoneditor.css'></link>
+    <style type="text/css">
+        BODY {
+            padding: 20px;
+            padding-right: 40px;
+        }
+        TEXTAREA {
+            width: 100%;
+            font-family: "Courier New";
+            height: 200px;
+        }
+        BUTTON {
+            margin-top: 4px;
+        }
+        #json {
+            border: 1px solid #555;
+            padding: 20px;
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+<h3>Form Builder</h3>
+<div id="builder"></div>
+<h3>Form JSON</h3>
+<div id="edit-json"></div>
+<button onclick="updateBuilder()" class="btn btn-primary">Update Builder</button>
+<div style="height:60px"></div>
+<h3>Form View</h3>
+<div id="view"></div>
+</body>
+<script type='text/javascript'>
+  var container = document.getElementById("edit-json");
+  //var options = {};
+  var options = {
+    modes: ['text', 'code', 'tree', 'form', 'view'],
+    mode: 'code',
+    ace: ace
+  };
+  var editor = new JSONEditor(container, options);
+  // var jsonEditElement = document.getElementById('edit-json');
+  function setupBuilder(components) {
+    var builder = new Formio.FormBuilder(document.getElementById('builder'), {
+      display: 'form',
+      components,
+      settings: {}
+    }, {
+      baseUrl: ''
+    });
+    builder.setDisplay('form').then(function (instance) {
+      instance.on('change', function (form) {
+        formRef = form;
+        if (form.components) {
+          editor.set(form);
+          setupView(form.components)
+        }
+      });
+    });
+  }
+  function setupView(components) {
+    Formio.createForm(document.getElementById('view'), {
+      display: 'form',
+      components,
+      settings: {}
+    }, {
+      baseUrl: ''
+    });
+  }
+  function updateBuilder() {
+     var components = editor.get().components;
+     try {
+       //var form = JSON.parse(components);
+       //components = form.components;
+       if (_.isArray(components)) {
+         setupBuilder(components);
+         setupView(components);
+         console.log(components);
+       }
+     } catch (e) {
+       alert(e);
+       console.log(e);
+     }
+  }
+  setupBuilder([])
+</script>
+</html>
+
