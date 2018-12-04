@@ -46,7 +46,6 @@
       instance.on('change', function (form) {
         console.log('Changed form.')
         var f = function() {
-          formRef = form;
           if (form.components) {
             console.log('SETTING JSON')
             jsonEditElement.innerHTML = JSON.stringify(form, null, 4);
