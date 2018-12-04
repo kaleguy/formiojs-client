@@ -44,18 +44,10 @@
     });
     builder.setDisplay('form').then(function (instance) {
       instance.on('change', function (form) {
-        console.log('Changed form.')
-        var g = '';
-        var f = function() {
-          if (form.components) {
-            g = JSON.stringify(form, null, 4);
-            jsonEditElement.innerHTML = JSON.stringify(form, null, 4);
-            console.log('SETTING JSON', g, form)
-          } else {
-            console.log('NO COMPONENTS', form)
-          }
+        formRef = form;
+        if (form.components) {
+          jsonEditElement.value = JSON.stringify(form, null, 4);
         }
-        window.setTimeout(f, 10)
       });
     });
   }
