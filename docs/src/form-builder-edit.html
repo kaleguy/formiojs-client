@@ -30,12 +30,15 @@
 <h3>Form JSON</h3>
 <textarea id="edit-json"></textarea>
 <button onclick="updateBuilder()" class="btn btn-primary">Update Builder</button>
+<div style="height:60px"></div>
+<h3>Form View</h3>
+<div id="view"></div>
 </body>
 <script type='text/javascript'>
   var jsonElement = document.getElementById('json');
   var jsonEditElement = document.getElementById('edit-json');
   function setupBuilder(components) {
-    var builder = new Formio.FormBuilder(document.getElementById("builder"), {
+    var builder = new Formio.FormBuilder(document.getElementById('builder'), {
       display: 'form',
       components,
       settings: {}
@@ -47,17 +50,27 @@
         formRef = form;
         if (form.components) {
           jsonEditElement.value = JSON.stringify(form, null, 4);
+          setupView(form.components)
         }
       });
     });
   }
+  function setupView(components) {
+    Formio.createForm(document.getElementById('view'), {
+      display: 'form',
+      components,
+      settings: {}
+    }, {
+      baseUrl: ''
+    });
+  }
   function updateBuilder() {
-     components = jsonEditElement.value;
      try {
        var form = JSON.parse(components);
        var components = form.components;
        if (_.isArray(components)) {
          setupBuilder(components);
+         setupView(components);
          console.log(components);
        }
      } catch (e) {
