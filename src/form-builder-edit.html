@@ -48,7 +48,10 @@
         var f = function() {
           formRef = form;
           if (form.components) {
+            console.log('SETTING JSON')
             jsonEditElement.innerHTML = JSON.stringify(form, null, 4);
+          } else {
+            console.log('NO COMPONENTS', form)
           }
         }
         window.setTimeout(f, 10)
