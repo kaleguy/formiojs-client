@@ -65,9 +65,10 @@
     });
   }
   function updateBuilder() {
+     var components = jsonEditElement.value;
      try {
        var form = JSON.parse(components);
-       var components = form.components;
+       components = form.components;
        if (_.isArray(components)) {
          setupBuilder(components);
          setupView(components);
