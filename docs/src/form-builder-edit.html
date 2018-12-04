@@ -45,10 +45,12 @@
     builder.setDisplay('form').then(function (instance) {
       instance.on('change', function (form) {
         console.log('Changed form.')
+        var g = '';
         var f = function() {
           if (form.components) {
-            console.log('SETTING JSON', form)
+            g = JSON.stringify(form, null, 4);
             jsonEditElement.innerHTML = JSON.stringify(form, null, 4);
+            console.log('SETTING JSON', g, form)
           } else {
             console.log('NO COMPONENTS', form)
           }
