@@ -27,4 +27,6 @@ your apps.
 
 [Live Docs/Demo Site](https://kaleguy.github.io/formiojs-client)
 
+[Form Builder with JSON Editor](https://kaleguy.github.io/formiojs-client/src/form-builder-edit-json.html)
+
 
